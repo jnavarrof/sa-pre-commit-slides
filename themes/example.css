@@ -1,6 +1,26 @@
 /* @theme example */
 
-@import 'uncover';
+@import 'default';
+
+:root {
+  width: 1280px;
+  height: 960px;
+  font-size: 40px;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+h3.centered {
+  text-align: center;
+}
 
 section {
   background: #cef;
@@ -8,10 +28,7 @@ section {
   font-size: 20px;
   padding: 40px;
 }
-p {
-  text-align: left;
-  font-size: 1rem;
-}
-pre {
-   font-size: 1rem;
+
+code {
+  font-size: 8x;
 }

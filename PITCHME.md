@@ -2,36 +2,7 @@
 marp: true
 title: A `pre-commit` 101
 description: The easiest way to keep your repository tidy.
-theme: defautl
-style: |
-  :root {
-    width: 1280px;
-    height: 960px;
-    font-size: 40px;
-    padding: 1rem;
-  }
-  h1 {
-  font-size: 1.5rem;
-  // color: #09c;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-        text-align: center;
-  }
-
-  h3.centered {
-        text-align: center;
-  }
-
-  section {
-    background: #cef;
-    color: #135;
-  }
-
-  code {
-    font-size: 8x;
-  }
+theme: default
 
 paginate: true
 _paginate: false
@@ -121,7 +92,7 @@ $ pre-commit install --install-hooks
 and run over all files
 
 ```bash
-pre-commit run --all-files
+$ pre-commit run --all-files
 ```
 
 ---
@@ -151,9 +122,11 @@ jobs:
 ![40% w:500](assets/github-action.png)
 
 ---
+<!-- Scoped style -->
 <style scoped>
-:section {
-  text-align: center;
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
 }
 </style>
 
@@ -163,21 +136,18 @@ jobs:
 
 ## <!--fit-->  **[pre-commit hooks you must know](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)**
 
-[![h:5em right](assets/play_icon.png)](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)
+[![w:150px center](assets/play_icon.png)](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)
 
 # <!--fit--> boost your productivity
 
 ---
-<!-- Scoped style -->
+
 <style scoped>
-:section {
+h3 {
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 </style>
-
-<!--
-paginate: false
-footer: ''
--->
 
 ### <!--fit--> :ok_hand:
