@@ -25,10 +25,10 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   # Docker
-  - repo: https://github.com/hadolint/hadolint
-    rev: v2.10.0
-    hooks:
-      - id: hadolint-docker
+  # - repo: https://github.com/hadolint/hadolint
+  #  rev: v2.10.0
+  #  hooks:
+  #    - id: hadolint-docker
   # YAML
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.26.3
