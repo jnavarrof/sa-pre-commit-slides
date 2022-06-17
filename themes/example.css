@@ -1,0 +1,17 @@
+/* @theme example */
+
+@import 'uncover';
+
+section {
+  background: #cef;
+  color: #135;
+  font-size: 20px;
+  padding: 40px;
+}
+p {
+  text-align: left;
+  font-size: 1rem;
+}
+pre {
+   font-size: 1rem;
+}
