@@ -1,11 +1,12 @@
+---
 name: GitHub Pages
-
+# yamllint disable-line rule:truthy
 on:
   push:
     branches:
-      #      - master
-      #- main
-      # - '*'
+    #      - master
+    # - main
+    # - '*'
 
 jobs:
   build:
@@ -41,9 +42,11 @@ jobs:
           touch ./dist/.nojekyll
         env:
           # Please update URL if you want to use custom domain
+          # yamllint disable-line rule:line-length
           URL: https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}
 
-          # Recommend to set lang for your deck to get better rendering for Open Graph image
+          # Recommend to set lang for your deck to get better rendering
+          # for Open Graph image
           LANG: en-US
 
       - name: Deploy to GitHub pages
