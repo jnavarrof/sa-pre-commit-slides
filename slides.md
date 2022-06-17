@@ -10,57 +10,41 @@ footer: '[https://github.com/jnavarrof/sa-pre-commit-slides](https://github.com/
 ---
 # <!--fit--> An introduction to *pre-commit*
 The easiest way to keep your repository tidy
-
----
-![bg right 60%](assets/SA_Epic_Logo.jpeg)
-
-## asdfdsf
-
-asdfasdf
-asdfasdf
+<!-- ![w:400px top](assets/SA_Epic_Logo.jpeg) -->
 
 ---
 
-![Marp bg 60%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png)
+<!-- _theme: default -->
+
+![Marp 80%](assets/pre-commit.png)
+Link: [pre-commit hooks](https://pre-commit.com/)
+
+---
+#### <!--fit--> Using `git pre-commit hooks`
+
+* Validation and linting are Best Practices
+* The number of available checks is extensive
+* Easy step towards *shifting left* with security
+* Simple integration with CI/CD pipelines
 
 ---
 
 ![bg](#123)
 ![](#fff)
 
-##### <!--fit--> [Marp CLI](https://github.com/marp-team/marp-cli) + [GitHub Pages](https://github.com/pages) | [Netlify](https://www.netlify.com/) | [Vercel](https://vercel.com/)
-
-##### <!--fit--> 👉 The easiest way to host<br />your Marp deck on the web
-
----
-
-![bg right 60%](https://icongr.am/octicons/mark-github.svg)
-
-## **[GitHub Pages](https://github.com/pages)**
-
-#### Ready to write & host your deck!
-
-[![Use this as template h:1.5em](https://img.shields.io/badge/-Use%20this%20as%20template-brightgreen?style=for-the-badge&logo=github)](https://github.com/yhatt/marp-cli-example/generate)
+##### <!--fit--> [GitHub Actions](https://github.com/actions) + [pre-commit hooks](https://pre-commit.com/)
+##### <!--fit--> 👉 The easiest way to keep <br/> your repository tidy
 
 ---
+<!-- footer: '' -->
 
-![bg right 60%](https://icongr.am/simple/netlify.svg?colored)
+![bg right 80%](https://miro.medium.com/max/508/1*SE_FC8cspNAz_pFojUEsTg.jpeg)
 
-## **[Netlify](https://www.netlify.com/)**
+###### <!--fit-->  **[pre-commit hooks you must know](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)**
 
-#### Ready to write & host your deck!
+### Boost your productivity!
 
-[![Deploy to Netlify h:1.5em](./assets/netlify-deploy-button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example)
-
----
-
-![bg right 60%](https://icongr.am/simple/zeit.svg)
-
-## **[Vercel](https://vercel.com/)**
-
-#### Ready to write & host your deck!
-
-[![Deploy to Vercel h:1.5em](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/yhatt/marp-cli-example)
+[![How to  h:1.5em](assets/play_icon.png)](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)
 
 ---
 <!--
