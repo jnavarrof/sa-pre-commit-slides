@@ -5,7 +5,7 @@ description: The easiest way to keep your repository tidy.
 theme: uncover
 paginate: true
 _paginate: false
-header: 
+header:
 footer: '[https://github.com/jnavarrof/sa-pre-commit-slides](https://github.com/jnavarrof/sa-pre-commit-slides)'
 ---
 # <!--fit--> An introduction to *pre-commit*
@@ -69,4 +69,3 @@ footer: ''
 -->
 
 ### <!--fit--> :ok_hand:
-
