@@ -3,9 +3,9 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - master
-      - main
-      - '*'
+      #      - master
+      #- main
+      # - '*'
 
 jobs:
   build:
