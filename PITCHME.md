@@ -8,12 +8,17 @@ paginate: true
 _paginate: false
 
 ---
-# <!--fit--> An introduction to *pre-commit*
+<!--
+_footer: "[https://github.com/jnavarrof/sa-pre-commit-slides](https://github.com/jnavarrof/sa-pre-commit-slides)
+"
+-->
+![bg](#123)
+![](#fff)
+
+# <!--fit--> **Introduction to *pre-commit***
 <!-- ![w:400px top](assets/SA_Epic_Logo.jpeg) -->
 
-## The easiest way to keep your repository tidy
-
-### [https://github.com/jnavarrof/sa-pre-commit-slides](https://github.com/jnavarrof/sa-pre-commit-slides)
+# The easiest way to keep your repository tidy
 
 ---
 # The Challenge
