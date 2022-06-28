@@ -123,8 +123,42 @@ jobs:
 
 # [GitHub Action](https://github.com/jnavarrof/sa-pre-commit-slides/actions/workflows/pre-commit.yml) <br/> running on GH
 
-![bg right 40% w:500](assets/pre-commit-checks.png)
-![40% w:500](assets/github-action.png)
+![bg right 80% ](assets/pre-commit-checks.png)
+![40% w:600px](assets/github-action.png)
+
+---
+
+<!-- Scoped style -->
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+![bg right w:90%](assets/pre-commit-image.jpeg)
+
+# <!--fit--> Get Started!
+## <!--fit-->  **[pre-commit hooks you must know](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)**
+[![w:150px center](assets/play_icon.png)](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)
+
+# <!--fit--> boost your productivity
+
+---
+
+<style scoped>
+h3 {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+### <!--fit--> :ok_hand:
+
+---
+
+This is an empty slide.
 
 ---
 <!-- Scoped style -->
@@ -144,15 +178,3 @@ img[alt~="center"] {
 [![w:150px center](assets/play_icon.png)](https://towardsdatascience.com/pre-commit-hooks-you-must-know-ff247f5feb7e)
 
 # <!--fit--> boost your productivity
-
----
-
-<style scoped>
-h3 {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
-}
-</style>
-
-### <!--fit--> :ok_hand:
