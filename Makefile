@@ -30,3 +30,18 @@ init: ## Init pre-commit hooks
 validate: ## Run Pre-commit against all files
 	$(info * Pre-commit run)
 	$(PIPENV) pre-commit run --all-files
+
+###############################################################################
+#
+# Slides
+#
+###############################################################################
+.PHONY: marp-server
+marp-server: ## Start marp-cli in server mode
+	$(info * Starting marp server)
+	$(PIPENV) marp -p --server .
+
+.PHONY: marp-pdf
+marp-pdf: ## Convert marp slides to pdf
+	$(info * Running marp conversion)
+	$(PIPENV) marp PITCHME.md --allow-local-files -o sa-pre-commit=hooks.pdf

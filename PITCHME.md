@@ -18,9 +18,9 @@ _footer: "[https://github.com/jnavarrof/sa-pre-commit-slides](https://github.com
 # <!--fit--> **Introduction to *pre-commit***
 <!-- ![w:400px top](assets/SA_Epic_Logo.jpeg) -->
 
-# The easiest way to keep your repository tidy
+## A framework for managing multi-language pre-commit hooks
 
----
+<!-- ---
 # The Challenge
 When developing collaboratively, we typically use git for version control and commit any changes to a feature branch that is reviewed before merging into the main codebase.
 
@@ -32,20 +32,21 @@ Low-quality code could include:
 - contains unused imports
 - references to variables before assignment
 - code that is failing on basic validation and liting steps
+ -->
+---
+# <!--fit--> Why `pre-commit hooks`?
+
+- Validation and linting are Best Practices
+- Helps running linting and validation tests
+- The number of [available checks](https://pre-commit.com/hooks.html) is extensive
+- Easy step towards *shifting left* with security
+- Simple integration with CI/CD pipelines
 
 ---
 ![Marp 90%](assets/pre-commit.png)
 
 ## Link: [pre-commit hooks](https://pre-commit.com/)
 
----
-# <!--fit--> Why `pre-commit hooks`?
-
-* Validation and linting are Best Practices
-* Helps running linting and validation tests
-* The number of [available checks](https://pre-commit.com/hooks.html) is extensive
-* Easy step towards *shifting left* with security
-* Simple integration with CI/CD pipelines
 
 ---
 ![bg](#123)
