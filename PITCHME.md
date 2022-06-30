@@ -1,6 +1,6 @@
 ---
 marp: true
-title: A `pre-commit` 101
+title: A intro to pre-commit
 description: The easiest way to keep your repository tidy.
 theme: default
 

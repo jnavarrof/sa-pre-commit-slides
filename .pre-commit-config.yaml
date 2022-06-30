@@ -25,10 +25,10 @@ repos:
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   # Docker
-  # - repo: https://github.com/hadolint/hadolint
-  #  rev: v2.10.0
-  #  hooks:
-  #    - id: hadolint-docker
+#   - repo: https://github.com/hadolint/hadolint
+#     rev: v2.10.0
+#     hooks:
+#       - id: hadolint
   # YAML
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.26.3
@@ -39,4 +39,11 @@ repos:
     rev: 2.1.6
     hooks:
       - id: shellcheck
-      - id: shfmt
+#       - id: shfmt
+  # TERRAFORM ##################################################################
+#   - repo: https://github.com/gruntwork-io/pre-commit
+#     rev: v0.1.17
+#     hooks:
+#       - id: terraform-fmt
+# #      - id: terraform-validate
+#       - id: tflint
