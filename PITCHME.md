@@ -3,7 +3,6 @@ marp: true
 title: A intro to pre-commit
 description: The easiest way to keep your repository tidy.
 theme: default
-
 paginate: true
 _paginate: false
 
