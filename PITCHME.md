@@ -33,6 +33,12 @@ Low-quality code could include:
 - references to variables before assignment
 - code that is failing on basic validation and liting steps
  -->
+
+---
+![Marp 90%](assets/pre-commit.png)
+
+## Link: [pre-commit hooks](https://pre-commit.com/)
+
 ---
 # <!--fit--> Why `pre-commit hooks`?
 
@@ -43,10 +49,14 @@ Low-quality code could include:
 - Simple integration with CI/CD pipelines
 
 ---
-![Marp 90%](assets/pre-commit.png)
+# Development workflow example using `pre-commit`
 
-## Link: [pre-commit hooks](https://pre-commit.com/)
+Image below shows an example development workflow. Pre-commit hooks are triggered to run the black code formatter, flake8 checker over files with changes. If all checks are succesfull, commit operation will continue.
+<br/>
 
+![](https://ljvmiranda921.github.io/assets/png/tuts/precommit_pipeline.png)
+
+Source: [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/).
 
 ---
 ![bg](#123)
