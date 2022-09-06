@@ -44,4 +44,20 @@ marp-server: ## Start marp-cli in server mode
 .PHONY: marp-pdf
 marp-pdf: ## Convert marp slides to pdf
 	$(info * Running marp conversion)
-	$(PIPENV) marp PITCHME.md --allow-local-files -o sa-pre-commit=hooks.pdf
+	$(PIPENV) marp PITCHME.md --allow-local-files -o sa-pre-commit-hooks.pdf
+
+###############################################################################
+#
+# patch files
+#
+# diff -u file1.html file2.html > patchfile.patch
+###############################################################################
+.PHONY: patch_docker
+patch_docker: ##  Apply Docker patch
+	$(info * Patch for Docker)
+	$(PIPENV) patch --verbose .pre-commit-config.yaml docker.patch
+
+.PHONY: patch_terraform
+patch_terraform: ##  Apply Terraform patch
+	$(info * Patch for Terraform)
+	$(PIPENV) patch --verbose .pre-commit-config.yaml terraform.patch

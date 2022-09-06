@@ -111,6 +111,8 @@ $ pre-commit run --all-files
 ```
 
 ---
+
+---
 # Create a GitHub Action
 To use with GitHub Actions, make a file `.github/workflwos/pre-commit.yml`. Use following template to get started.
 
