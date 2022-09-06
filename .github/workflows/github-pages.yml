@@ -1,0 +1,92 @@
+---
+name: pages-build-deploy
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+      - master
+    # paths:
+    #   - 'slides/**'
+
+defaults:
+  run:
+    working-directory: ./slides
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Detect Node version from .nvmrc
+        id: node_version
+        run: echo "::set-output name=nvmrc::$(cat .nvmrc)"
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ steps.node_version.outputs.nvmrc }}
+
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies and Puppeteer
+        run: |
+          npm ci
+          sudo apt-get install libgbm-dev
+          npm i puppeteer --no-save
+
+      - name: Install dependencies and Puppeteer
+        run: npm ci && npm i puppeteer --no-save
+
+      - name: Build Marp slide deck
+        # yamllint disable-line rule:line-length
+        run: CHROME_PATH=$(node -e "console.log(require('puppeteer').executablePath())") npm run build
+        env:
+          # Please update URL if you want to use custom domain
+          # yamllint disable-line rule:line-length
+          URL: https://${{ github.event.repository.owner.name }}.github.io/${{ github.event.repository.name }}
+
+          # Recommend to set lang for your deck to get better
+          # rendering for Open Graph image
+          LANG: en-US
+
+      - name: Check current files
+        run: find .
+
+      - name: Upload page artifacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: slides/dist
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      contents: read
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@main
