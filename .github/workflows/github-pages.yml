@@ -6,12 +6,6 @@ on:
     branches:
       - main
       - master
-    # paths:
-    #   - 'slides/**'
-
-defaults:
-  run:
-    working-directory: ./slides
 
 concurrency:
   group: gh-pages
@@ -60,13 +54,10 @@ jobs:
           # rendering for Open Graph image
           LANG: en-US
 
-      - name: Check current files
-        run: find .
-
       - name: Upload page artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          path: slides/dist
+          path: dist
 
   # Deploy job
   deploy:
