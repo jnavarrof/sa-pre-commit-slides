@@ -36,7 +36,7 @@ Low-quality code could include:
 ---
 ![Marp 90%](assets/pre-commit.png)
 
-## Link: [pre-commit hooks](https://pre-commit.com/)
+## Link: [pre-commit hooks](https://pre-commit.com/).
 
 ---
 # <!--fit--> Why `pre-commit hooks`?
