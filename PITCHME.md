@@ -58,13 +58,6 @@ Image below shows an example development workflow. Pre-commit hooks are triggere
 Source: [Automate Python workflow using pre-commits: black and flake8](https://ljvmiranda921.github.io/notebook/2018/06/21/precommits-using-black-and-flake8/).
 
 ---
-![bg](#123)
-![](#fff)
-
-##### <!--fit--> [GitHub Actions](https://github.com/actions) + [`pre-commit` hooks](https://pre-commit.com/)
-##### <!--fit--> 👉 The easiest way to keep  your repository tidy
-
----
 # Prepare your environment
 Install `pre-commit` tool
 
@@ -111,6 +104,53 @@ $ pre-commit run --all-files
 ```
 
 ---
+# Example: Dockerfiles
+
+```bash
+$ make patch_docker
+* Patch for Docker
+pipenv run patch --verbose .pre-commit-config.yaml docker.patch
+done
+
+$ make validate
+* Pre-commit run
+pipenv run pre-commit run --all-files
+check for added large files..............................................Passed
+check for case conflicts.................................................Passed
+check that executables have shebangs.................(no files to check)Skipped
+check that scripts with shebangs are executable..........................Passed
+check for merge conflicts................................................Passed
+check json...............................................................Passed
+check toml...............................................................Passed
+check yaml...............................................................Passed
+debug statements (python)............................(no files to check)Skipped
+detect private key.......................................................Passed
+detect aws credentials...................................................Passed
+fix double quoted strings............................(no files to check)Skipped
+fix end of files.........................................................Passed
+mixed line ending........................................................Passed
+python tests naming..................................(no files to check)Skipped
+fix requirements.txt.................................(no files to check)Skipped
+trim trailing whitespace.................................................Passed
+Lint Dockerfiles.........................................................Failed
+- hook id: hadolint
+- exit code: 1
+
+examples/Dockerfile:2 DL3018 warning: Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`
+examples/Dockerfile:2 DL3019 info: Use the `--no-cache` switch to avoid the need to use `--update` and remove `/var/cache/apk/*` when done installing packages
+examples/Dockerfile:4 DL3002 warning: Last USER should not be root
+
+yamllint.................................................................Passed
+Test shell scripts with shellcheck...................(no files to check)Skipped
+make: *** [validate] Error 1
+```
+---
+![bg](#123)
+![](#fff)
+
+##### <!--fit--> [GitHub Actions](https://github.com/actions) + [`pre-commit` hooks](https://pre-commit.com/)
+##### <!--fit--> 👉 The easiest way to keep  your repository tidy
+
 
 ---
 # Create a GitHub Action
