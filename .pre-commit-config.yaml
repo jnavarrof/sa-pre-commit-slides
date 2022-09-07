@@ -34,12 +34,12 @@ repos:
     rev: v1.26.3
     hooks:
       - id: yamllint
+        args: ["-d", "relaxed"]
   # Shell
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 2.1.6
     hooks:
       - id: shellcheck
-#       - id: shfmt
   # TERRAFORM ##################################################################
 #   - repo: https://github.com/gruntwork-io/pre-commit
 #     rev: v0.1.17
@@ -47,3 +47,8 @@ repos:
 #       - id: terraform-fmt
 # #      - id: terraform-validate
 #       - id: tflint
+#  - repo: https://github.com/terraform-docs/terraform-docs
+#    rev: v0.16.0
+#    hooks:
+#      - id: terraform-docs-go
+#        args: ["markdown", "table", "--recursive", "--output-file", "README.md", "--output-mode","inject", "."]
