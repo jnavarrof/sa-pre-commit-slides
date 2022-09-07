@@ -47,8 +47,8 @@ repos:
 #       - id: terraform-fmt
 # #      - id: terraform-validate
 #       - id: tflint
-#  - repo: https://github.com/terraform-docs/terraform-docs
-#    rev: v0.16.0
-#    hooks:
-#      - id: terraform-docs-go
-#        args: ["markdown", "table", "--recursive", "--output-file", "README.md", "--output-mode","inject", "."]
+#   - repo: https://github.com/terraform-docs/terraform-docs
+#     rev: v0.16.0
+#     hooks:
+#       - id: terraform-docs-go
+#         args: ["markdown", "table", "--output-file", "README.md", "--output-mode","inject", "examples/tf_module/."]
